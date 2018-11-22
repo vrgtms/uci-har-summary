@@ -2,7 +2,7 @@
 
 The dataset ```uci_har_summary.txt``` created by the script ```run_analysis.R``` is the summary of the original [UCI HAR Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). This summary contains the means of the means and standard deviations for each measurement grouped by the subjects and the activity types.
 
-## Columns
+## Codebook
 
 The summary has the following columns:
 - **subject**: the id of the subject who carried out the experiment
