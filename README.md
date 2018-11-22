@@ -9,7 +9,7 @@ The summary has the following columns:
 - **activity**: the type of activity performed by the subject
 - all other variables are the means of the measurements you can find in the original dataset with the same feature name belonging to the subject and activity
 
-## Reproducing the summary
+## Creating the summary
 1. Install the ```dplyr``` R package
 2. Download the [UCI HAR Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) and unzip it into the same folder where the ```run_analysis.R``` is
 3. Run the ```run_analysis.R``` script. You can find the created ```uci_har_summary.txt``` file in the same folder.
