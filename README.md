@@ -8,4 +8,4 @@ The dataset ```uci_har_summary.txt``` created by the script ```run_analysis.R```
 - ```uci_har_summary.txt```: After running the analysis this file contains the analysis results
 
 ## Creating the summary
-Run the ```run_analysis.R``` script. It downloads and unzip the UCI HAR dataset if it's not already prepared, installs the dplyr R package if needed, performs the analysis and writes the results to the ```uci_har_summary.txt``` text file.
+Run the ```run_analysis.R``` script. It downloads and unzips the UCI HAR dataset if it's not already prepared, installs the dplyr R package if needed, performs the analysis and writes the results to the ```uci_har_summary.txt``` text file.
