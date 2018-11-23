@@ -1,15 +1,11 @@
 # Summary of the UCI HAR Dataset
 
-The dataset ```uci_har_summary.txt``` created by the script ```run_analysis.R``` is the summary of the original [UCI HAR Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). This summary contains the means of the means and standard deviations for each measurement grouped by the subjects and the activity types.
+The dataset ```uci_har_summary.txt``` created by the script ```run_analysis.R``` is the summary of the original [UCI HAR Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). This summary contains the averages of the means and standard deviations for each measurement grouped by the subjects and the activity types.
 
-## Codebook
-
-The summary has the following columns:
-- **subject**: the id of the subject who carried out the experiment
-- **activity**: the type of activity performed by the subject
-- all other variables are the means of the measurements you can find in the original dataset with the same feature name belonging to the subject and activity
+## Files
+- ```run_analysis.R```: The script to run for perform the analysis
+- ```codebook.md```: Codebook for the summary file. Describes the variables and the transformation methods
+- ```uci_har_summary.txt```: After running the analysis this file contains the analysis results
 
 ## Creating the summary
-1. Install the ```dplyr``` R package
-2. Download the [UCI HAR Dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) and unzip it into the same folder where the ```run_analysis.R``` is
-3. Run the ```run_analysis.R``` script. You can find the created ```uci_har_summary.txt``` file in the same folder.
+Run the ```run_analysis.R``` script. It downloads and unzip the UCI HAR dataset if it's not already prepared, installs the dplyr R package if needed, performs the analysis and writes the results to the ```uci_har_summary.txt``` text file.

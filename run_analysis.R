@@ -1,4 +1,14 @@
-# We assume that the unzipped dataset is in the same directory as this script
+# Download and unzip the UCI HAR dataset if folder is not present
+if (!("UCI HAR Dataset" %in% dir())) {
+  download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "UCI HAR Dataset.zip")
+  unzip("UCI HAR Dataset.zip")
+  file.remove("UCI HAR Dataset.zip")
+}
+
+# Install dplyr if not installed
+if (!("dplyr" %in% installed.packages())) {
+  install.packages("dplyr")
+}
 
 # Read the data into dataframes
 train           <- read.table(file.path("UCI HAR Dataset", "train", "X_train.txt"))
@@ -33,11 +43,11 @@ merged          <- merged[colsToKeep]
 # (3) Change activity ids to descriptive labels
 merged$activity <- activity.labels[[2]][merged$activity]
 
-# (5) Create new, tidy dataset with averages for each variable for each activity and subject
+# (5) Create new, summary dataset with averages for each variable for each activity and subject
 library("dplyr")
-tidy <- merged %>%
+summary <- merged %>%
         group_by(subject, activity) %>%
         summarize_all(funs(mean))
 
-# Save the tidy dataset to "tidy.txt"
-write.table(tidy, file="uci_har_summary.txt", row.name = FALSE)
+# Save the summary dataset to "uci_har_summary.txt"
+write.table(summary, file="uci_har_summary.txt", row.name = FALSE)
